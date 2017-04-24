@@ -26,7 +26,7 @@ public class MSService {
         // 若为true，则所有jedis实例均是可用的
         config.setTestOnBorrow(true);
 
-        pool = new JedisPool(config, "121.42.63.39", 6379, 3000);
+        pool = new JedisPool(config, "127.0.0.1", 6379, 3000);
     }
 
     DistributedLock distributedLock = new DistributedLock(pool);
